@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "977a20f8-2894-420c-a2db-17150fa9d26d",
+		"name": "api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "emailonce",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "amirreza.moghaddampoor@gmail.com",
+							"description": "input email",
+							"type": "default"
+						},
+						{
+							"key": "subject",
+							"value": "subject",
+							"description": "input subject",
+							"type": "default"
+						},
+						{
+							"key": "body",
+							"value": "body",
+							"description": "input body",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/email",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "emailbulk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email[]",
+							"value": "",
+							"description": "input",
+							"type": "default"
+						},
+						{
+							"key": "email[]",
+							"value": "",
+							"type": "default"
+						},
+						{
+							"key": "email[]",
+							"value": "",
+							"type": "default"
+						},
+						{
+							"key": "subject",
+							"value": "",
+							"type": "default"
+						},
+						{
+							"key": "body",
+							"value": "",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/email/bulk",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"email",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cron",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "job",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email_id",
+							"value": "23",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/job",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"job"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crondate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/cron?starttime=2022-02-22 11:03:19&endtime=2022-02-22 11:03:19",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cron"
+					],
+					"query": [
+						{
+							"key": "starttime",
+							"value": "2022-02-22 11:03:19"
+						},
+						{
+							"key": "endtime",
+							"value": "2022-02-22 11:03:19"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost/oop",
+			"type": "default"
+		}
+	]
+}

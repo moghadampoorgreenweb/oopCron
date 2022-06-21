@@ -1,0 +1,23 @@
+{
+    "name": "a.moghadampoor/oop",
+    "autoload": {
+        "psr-4": {
+            "App\\": "./app"
+        }
+    },
+    "authors": [
+        {
+            "name": "a.moghadampoor",
+            "email": "a.moghadampoor@greenweb.ir"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^8.83",
+        "nesbot/carbon": "^2.57",
+        "hekmatinasser/verta": "^2.0",
+        "larapack/dd": "^1.1",
+        "illuminate/events": "^8.83",
+        "symfony/mailer": "^5.4",
+        "phpmailer/phpmailer": "^6.5"
+    }
+}
